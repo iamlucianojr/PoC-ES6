@@ -32,3 +32,110 @@ let template = `
 `;
 
 console.log(template);
+
+
+
+function getPerson() {
+
+	let name = "Luciano";
+
+	let age = 21;
+
+	return {
+
+		name, 
+
+		age,
+
+		greet: () => `Name: ${name}, Age: ${age}`
+
+	};
+
+}
+
+alert(getPerson().greet());
+
+let person = {
+
+	name: "Foobar",
+
+	age: 22
+
+};
+
+let {name, age} = person;
+
+alert(age);
+
+let data = {
+
+	name: "LGJ",
+
+	age: 24,
+
+	results: ["Foo", "Bar"],
+
+	count: 40
+
+}
+
+let {results, count} = data;
+
+console.log(results, count);
+
+
+function greet({name, age}) {
+
+	console.log(`Hello ${name}. You are ${age}`);
+
+}
+
+greet({
+
+	name: "Luciano",
+
+	age: 22
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
