@@ -96,7 +96,128 @@ greet({
 
 	age: 22
 
-})
+});
+
+
+
+class User {
+
+	constructor(username, email) {
+
+		this.username = username;
+
+		this.email = email;
+
+	}
+
+	static register(...args) {
+
+		return new User(...args);
+
+	}
+
+	get foo() {
+
+		return "Foo";
+
+	}
+
+	// set setEmail(email) {
+
+	// 	this.email = 'email';
+
+	// }
+
+	changeEmail(newEmail) {
+
+		this.email = newEmail;
+
+	}
+}
+
+let user = new User('luciano', 'luciano@lucianojr.com.br');
+
+let userStaticCreating = User.register('luciano', 'luciano@lucianojr.com.br');
+
+console.log(userStaticCreating);
+
+user.changeEmail('luciano@lucianojr.com');
+
+console.log(user.foo);
+
+// console.log(user.setEmail);
+
+console.log(user.email);
+
+
+function log(strategy) {
+
+	strategy.handle();
+
+}
+
+class ConsoleLogger {
+
+	handle() {
+		console.log("Using the console log strategy");
+	}
+
+}
+
+class AlertLogger {
+
+	handle() {
+		alert("Using the alert log strategy");
+	}
+
+}
+
+log(new AlertLogger());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
