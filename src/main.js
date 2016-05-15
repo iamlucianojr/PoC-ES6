@@ -23,3 +23,12 @@ function sum(...numbers) {
 }
 
 console.log(sum(1,2,3,4));
+
+let title = "Templates in ES6";
+let template = `
+	<div>
+		<h1>${title}</h1>
+	</div>
+`;
+
+console.log(template);
